@@ -1,0 +1,91 @@
+# Developed by NeonStudios
+# Version 0.1.5
+
+# Debug
+# Only enable while testing or facing issues
+debug: false
+
+# bStats helps me collect info about my plugin
+# This won't affect your server at all
+# It is recommended to keep this on
+bStats: true
+
+# Time interval of the KeyAll event can be configured below
+# Time interval is in seconds
+timeInterval: 60
+
+# Commands to be executed when timer ends
+# This executes the command from console
+# Do not put player commands in here
+command:
+  - "crate key giveall key 1 -s"
+
+# Commands that will be executed for each online player when the timer ends
+perPlayerCommand:
+  # - give {player} diamond
+
+# Enable or disable sending the title message
+# Everything in the title is customizable
+# title-fade-in, title-stay & title-fade-out are all in ticks
+# To disable, just leave both title and subtitle empty
+title-message: #"&aCongratulations!"
+subtitle-message: #"You've been awarded a key as part of our Key All event!"
+title-fade-in: 10
+title-stay: 70
+title-fade-out: 20
+
+# Message will be shown on the players Action bar / HotBar
+# To disable, just leave empty
+hotbar-message: #"&aCongratulations! You've been awarded a key!"
+
+# Message sent when the KeyAll event is over
+# Color codes are supported (Eg: &e, &a, etc..)
+# Add more line by using "-"
+message:
+  - "&aCongratulations! You've been awarded a key as part of our Key All event!"
+  - "&6Thank you for participating!"
+
+# Sound to be player on the KeyAll event
+# Has to be a sound available within minecraft itself
+# Default : ENTITY_EXPERIENCE_ORB_PICKUP
+# Use sounds from: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html / or https://helpch.at/docs/ for older versions
+#To disable the sound, just leave it empty
+sound: #ENTITY_EXPERIENCE_ORB_PICKUP
+volume: 0.5
+pitch: 2.0
+
+# The key represents the timing in seconds.
+
+# Available actions you can use:
+# message - Sends a chat message to players.
+# hotbar - Sends a message to the player's hotbar.
+# title, subtitle, fadeIn, stay, fadeOut - Sends a title message.
+#     - You can leave either the 'title' or the 'subtitle' empty (or null) if you want.
+#     - If both are empty, no title message will be sent.
+# sound, volume, pitch - Plays a sound.
+
+# You can combine these actions in any way you like.
+# There are no conflicts, so you can use all of them together.
+#
+#Example below
+reminders:
+#  45:
+#    message: '&aThere will be a drop party in 45 seconds'
+#  30:
+#    message: '&aThere will be a drop party in 30 seconds'
+#    hotbar: '&cThere will be a drop party in 30 seconds'
+#    sound: ENTITY_PLAYER_LEVELUP
+#    volume: 0.5
+#    pitch: 1.0
+#  10:
+#    title: '&aDrop part in'
+#    subtitle: '&c10 seconds'
+#    fadeIn: 5
+#    stay: 20
+#    fadeOut: 5
+#  5:
+#    title: '&aDrop part in'
+#    subtitle: '&45 seconds'
+#    fadeIn: 10
+#    stay: 40
+#    fadeOut: 10

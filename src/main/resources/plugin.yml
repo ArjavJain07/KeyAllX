@@ -1,0 +1,21 @@
+name: KeyAllX
+version: 0.1.5
+main: studio.xstream.keyallx.KeyAllX
+api-version: 1.13
+author: XStreamStudio
+softdepend:
+  - PlaceholderAPI
+commands:
+  keyallx:
+    description: Reload the plugin with /keyallx reload
+    permission: keyallx.reload
+
+  reset-timer:
+    usage: /reset-timer
+    description: Reset the keyall timer
+    permission: keyallx.keyallx.manipulate_timer
+
+  stop-timer:
+    usage: /stop-timer
+    description: Stops the keyall timer
+    permission: keyallx.manipulate_timer
